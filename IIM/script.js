@@ -40,8 +40,8 @@ if((canvas.width/2)!= width_){
     x = width_ - canvas.width/2;
 }
 
-if((canvas.height/2)!= height_){
-    y = height_ - canvas.height/2;
+if((canvas.height)!= height_){
+    y = height_ - canvas.height;
 }
 
 function render(){
