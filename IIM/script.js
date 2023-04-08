@@ -38,10 +38,7 @@ let height_ = images[0].naturalHeight/2;
 
 if((canvas.width/2)!= width_){
     x = width_ - canvas.width/2;
-}
-
-if((canvas.height)!= height_){
-    y = height_ - canvas.height;
+    y = (x*9)/16
 }
 
 function render(){
@@ -49,7 +46,7 @@ function render(){
     canvas.height = window.innerHeight
     console.log("called")
     context.clearRect(0, 0, canvas.width, canvas.height)
-    context.drawImage(images[bulb.frame], -x, -y , images[bulb.frame].naturalWidth, canvas.height)
+    context.drawImage(images[bulb.frame], -x, y , images[bulb.frame].naturalWidth, canvas.height)
 }
 
 window.addEventListener("resize", () => {
@@ -58,9 +55,7 @@ window.addEventListener("resize", () => {
     
     if((canvas.width/2)!= width_){
         x = width_ - canvas.width/2;
-    }
-    if((canvas.height/2)!= height_){
-        y = height_ - canvas.height/2;
+        y = (x*9)/16
     }
     
   })
