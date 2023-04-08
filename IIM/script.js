@@ -4,9 +4,9 @@ canvas.height = window.innerHeight
 
 
 const context = canvas.getContext('2d')
-const frameCount = 10;
+const frameCount = 30;
 
-const CurrentFrame = (index) => `./bulb-anim/1 (${(index + 1).toString()}).png`;
+const CurrentFrame = (index) => `./bulb-anim/1 (${(index + 1).toString()}).jpg`;
 const images = []
 const bulb = {frame:0}
 
