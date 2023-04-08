@@ -32,22 +32,35 @@ images[0].onload = render;
 
 let width_ = images[0].naturalWidth/2;
 let x = 0;
+let y = 0;
+let height_ = images[0].naturalHeight/2;
 
+
+if((canvas.width/2)!= width_){
+    x = width_ - canvas.width/2;
+}
+
+if((canvas.height/2)!= height_){
+    y = height_ - canvas.height/2;
+}
 
 function render(){
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
     console.log("called")
     context.clearRect(0, 0, canvas.width, canvas.height)
-    context.drawImage(images[bulb.frame], -x, 0 , images[bulb.frame].naturalWidth, canvas.height)
+    context.drawImage(images[bulb.frame], -x, -y , images[bulb.frame].naturalWidth, canvas.height)
 }
 
 window.addEventListener("resize", () => {
     console.log("resize")
     render()    
+    
     if((canvas.width/2)!= width_){
         x = width_ - canvas.width/2;
-        console.log(x)
+    }
+    if((canvas.height/2)!= height_){
+        y = height_ - canvas.height/2;
     }
     
   })
