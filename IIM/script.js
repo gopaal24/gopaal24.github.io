@@ -44,9 +44,9 @@ if((canvas.width/2)!= width_){
 function render(){
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
-    console.log("called")
+    console.log(x, y)
     context.clearRect(0, 0, canvas.width, canvas.height)
-    context.drawImage(images[bulb.frame], -x, -y , images[bulb.frame].naturalWidth, canvas.height+y)
+    context.drawImage(images[bulb.frame], -x, -y , canvas.width + x, canvas.height+y)
 }
 
 window.addEventListener("resize", () => {
