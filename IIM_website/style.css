@@ -21,6 +21,8 @@ li{
 
 /* Navbar */
 .navbar{
+    width: 100vw;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -52,20 +54,43 @@ li{
 .menu li:nth-child(1):hover ~ .dot{
     opacity: 1;
     background: yellow;
-    transform: translate(-270px, 32px);
+    transform: translate(-400px, 32px);
 }
 
 .menu li:nth-child(2):hover ~ .dot{
     opacity: 1;
     background: yellow;
-    transform: translate(-170px, 32px);
+    transform: translate(-300px, 32px);
 }
 
 .menu li:nth-child(3):hover ~ .dot{
     opacity: 1;
     background: yellow;
-    transform: translate(-70px, 32px);
+    transform: translate(-200px, 32px);
 }
+
+.menu li:nth-child(4):hover ~ .dot{
+    opacity: 1;
+    background: yellow;
+    transform: translate(-80px, 32px);
+}
+
+.menu li:nth-child(1):hover {
+    transform: translateY(-3px);
+}
+
+.menu li:nth-child(2):hover {
+    transform: translateY(-3px);
+}
+
+.menu li:nth-child(3):hover {
+    transform: translateY(-3px);
+}
+
+.menu li:nth-child(4):hover {
+    transform: translateY(-3px);
+}
+
 
 .menu li{
     padding:5px 14px

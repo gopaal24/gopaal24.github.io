@@ -1,3 +1,4 @@
+//Contact
 const contact_btn = document.querySelector(".contact-btn")
 const close_btn = document.querySelector(".close-btn")
 const popup = document.querySelector(".popup")
@@ -49,4 +50,11 @@ window.addEventListener('click', (e)=>{
         popup1.style.display = 'none'
     }, 600)
     }
+})
+
+
+//Navbar Scroll
+const about_us = document.getElementById("about_us");
+about_us.addEventListener('click', ()=>{
+    document.scrollTop(100);
 })
