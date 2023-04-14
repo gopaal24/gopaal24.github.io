@@ -75,22 +75,9 @@ li{
     transform: translate(-80px, 32px);
 }
 
-.menu li:nth-child(1):hover {
+.menu li:hover {
     transform: translateY(-3px);
 }
-
-.menu li:nth-child(2):hover {
-    transform: translateY(-3px);
-}
-
-.menu li:nth-child(3):hover {
-    transform: translateY(-3px);
-}
-
-.menu li:nth-child(4):hover {
-    transform: translateY(-3px);
-}
-
 
 .menu li{
     padding:5px 14px
@@ -110,6 +97,7 @@ input[type=checkbox]{
 
 /* Sections */
 .section{
+    padding-top: 100px;
     width: 100%;
     min-height: 100vh;
     background-color: #ddd;
@@ -373,20 +361,28 @@ form{
     .menu li:nth-child(1):hover ~ .dot{
         opacity: 1;
         background: yellow;
-        transform: translate(0px, -125px);
+        transform: translate(0px, -170px);
     }
 
     .menu li:nth-child(2):hover ~ .dot{
         opacity: 1;
         background: yellow;
-        transform: translate(0px, -70px);
+        transform: translate(0px, -120px);
     }
 
     .menu li:nth-child(3):hover ~ .dot{
         opacity: 1;
         background: yellow;
-        transform: translateY(-20px);
+        transform: translateY(-70px);
     }
+
+    .menu li:nth-child(4):hover ~ .dot{
+        opacity: 1;
+        background: yellow;
+        transform: translateY(-25px);
+    }
+
+    
 
     .hamburger{
         cursor: pointer;

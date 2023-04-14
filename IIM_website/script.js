@@ -54,7 +54,23 @@ window.addEventListener('click', (e)=>{
 
 
 //Navbar Scroll
-const about_us = document.getElementById("about_us");
-about_us.addEventListener('click', ()=>{
-    document.scrollTop(100);
-})
+const menu = document.querySelector("#checkbox_toggle")
+const about_us = document.getElementById("about-us")
+const blog = document.getElementById("blog")
+const projects = document.getElementById("projects")
+const contacts = document.getElementById("contacts")
+
+if(window.innerWidth < 768){
+    about_us.addEventListener('click', ()=>{
+        menu.checked = false;
+    })
+    blog.addEventListener('click', ()=>{
+        menu.checked = false;
+    })
+    projects.addEventListener('click', ()=>{
+        menu.checked = false;
+    })
+    contacts.addEventListener('click', ()=>{
+        menu.checked = false;
+    })
+}
