@@ -364,7 +364,7 @@ form{
 }
 
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 60em){
     .menu{
         height: 100vh;
         display: none;
