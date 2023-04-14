@@ -74,3 +74,39 @@ if(window.innerWidth < 768){
         menu.checked = false;
     })
 }
+
+//Wave Animation on Scroll
+let wave1 = document.getElementById('wave1')
+let wave2 = document.getElementById('wave2')
+let wave3 = document.getElementById('wave3')
+let wave4 = document.getElementById('wave4')
+let wave5 = document.getElementById('wave5')
+let title = document.querySelector('.wave-title')
+let middle = document.querySelector('.wave-title .middle')
+
+window.addEventListener('scroll', ()=>{
+    let value = window.scrollY
+    wave1.style.backgroundPositionX = -value*1 + 'px';
+    wave2.style.backgroundPositionX = -value*1.5 + 'px';
+    wave3.style.backgroundPositionX = -value*2 + 'px';
+    wave4.style.backgroundPositionX = -value*2.5 + 'px';
+    wave5.style.backgroundPositionX = -value*2 + 'px';
+    if(value>400){
+        title.lastElementChild.style.display = 'none';
+    }
+    else{
+        title.lastElementChild.style.display = 'block';
+    }
+    if(value > 600){
+        middle.style.display = 'none';
+    }
+    else{
+        middle.style.display = 'block';
+    }
+    if(value>700){
+        title.firstElementChild.style.display = 'none';
+    }
+    else{
+        title.firstElementChild.style.display = 'block';
+    }
+})
