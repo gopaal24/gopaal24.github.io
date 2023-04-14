@@ -74,3 +74,15 @@ if(window.innerWidth < 768){
         menu.checked = false;
     })
 }
+
+//NavShow on Scroll
+
+const navbar = document.querySelector(".navbar")
+window.addEventListener('scroll', ()=>{
+    navbar.style.backroundColor = "red";
+
+    if(window.pageYOffset > 150){
+        console.log("working");
+        navbar.style.backroundColor = "red";
+    }
+})

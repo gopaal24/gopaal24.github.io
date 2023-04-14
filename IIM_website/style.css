@@ -21,24 +21,36 @@ li{
 
 /* Navbar */
 .navbar{
+    /* background-color: rgba(120, 118, 118, 0.1); */
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 12px 0px rgba(0, 0, 0, 0.);
     width: 100vw;
     position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
-    background-color: teal;
+    padding: 10px;
     color: #fff;
+    z-index: 2;
 }
 
-.logo{
-    font-size: 32px;
+.logo a{
+    color: #FAA613;
+    font-size: 4rem;
 }
 
 .menu .menu-all ul{
     display: flex;
     gap: 1em;
     font-size: 18px;
+}
+
+.menu .menu-all li{
+    transition: .3s;
+}
+
+.menu .menu-all li a{
+    color: #F5BB00;
 }
 
 .dot{
@@ -53,25 +65,25 @@ li{
 
 .menu li:nth-child(1):hover ~ .dot{
     opacity: 1;
-    background: yellow;
+    background: #FAA613;
     transform: translate(-400px, 32px);
 }
 
 .menu li:nth-child(2):hover ~ .dot{
     opacity: 1;
-    background: yellow;
+    background: #FAA613;
     transform: translate(-300px, 32px);
 }
 
 .menu li:nth-child(3):hover ~ .dot{
     opacity: 1;
-    background: yellow;
+    background: #FAA613;
     transform: translate(-200px, 32px);
 }
 
 .menu li:nth-child(4):hover ~ .dot{
     opacity: 1;
-    background: yellow;
+    background: #FAA613;
     transform: translate(-80px, 32px);
 }
 
@@ -97,10 +109,27 @@ input[type=checkbox]{
 
 /* Sections */
 .section{
+    background-image: url('img.jfif');
     padding-top: 100px;
     width: 100%;
     min-height: 100vh;
-    background-color: #ddd;
+    background-color: #3C474B;
+}
+
+.box{
+    background-color: rgba(80, 79, 79, 0.1);
+    backdrop-filter: blur(4px);
+    width: 80%;
+    height: 80vh;
+    display: block;
+    margin: auto;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    transition: .2s;
+}
+
+.box:hover{
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .container{
@@ -127,13 +156,15 @@ input[type=checkbox]{
 }
 
 .content-section .title{
+    color: #FAA613;
+    /* color: #F5BB00; */
     text-transform: uppercase;
     font-size: 28px;
 }
 
 .content-section .content h3{
     margin-top: 20px;
-    color: #5d5d5d;
+    color: #F5BB00;
     font-size: 21px;
 }
 
@@ -145,6 +176,7 @@ input[type=checkbox]{
 }
 
 .content-section .content .button a{
+    width: 80vh;
     background-color: #3d3d3d;
     padding: 12px 40px;
     color: #fff;
