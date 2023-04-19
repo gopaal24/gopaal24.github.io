@@ -91,13 +91,14 @@ window.addEventListener('scroll', ()=>{
     wave3.style.backgroundPositionX = -value*2 + 'px';
     wave4.style.backgroundPositionX = -value*2.5 + 'px';
     wave5.style.backgroundPositionX = -value*2 + 'px';
-    if(value>400){
+    if(value>350){
         title.lastElementChild.style.display = 'none';
+        console.log("working");
     }
     else{
         title.lastElementChild.style.display = 'block';
     }
-    if(value > 600){
+    if(value > 550){
         middle.style.display = 'none';
     }
     else{
@@ -109,4 +110,28 @@ window.addEventListener('scroll', ()=>{
     else{
         title.firstElementChild.style.display = 'block';
     }
+})
+
+//Image Slider
+let index = 0;
+let messages = ["Hello There", "Hayaku Hayaku", "Watashiva namiva spaida man des", "Yamate kudasai"];
+let images = ["img1", "img2", "img3", "img4"]
+
+const right = document.querySelector('.btn_right');
+const left = document.querySelector('.btn_left');
+const matter = document.querySelector('.testimonial_matter');
+const image = document.querySelector('.image_profile')
+
+right.addEventListener('click', ()=>{
+    index++;
+    if(index >= 4) index=0;
+    matter.innerHTML = messages[index];
+    image.style.backgroundImage = "url('images/"+images[index]+".jpg')";
+
+})
+left.addEventListener('click', ()=>{
+    index--;
+    if(index < 0) index=3;
+    matter.innerHTML = messages[index];
+    image.style.backgroundImage = "url('images/"+images[index]+".jpg')";
 })

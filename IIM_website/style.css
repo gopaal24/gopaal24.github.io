@@ -18,11 +18,7 @@ li{
     list-style: none;
 }
 
-.pages{
-    background: linear-gradient(180deg, #7209b7, #F72585 );
-}
 
-/* Navbar */
 .navbar{
     /* background-color: rgba(120, 118, 118, 0.1); */
     backdrop-filter: blur(4px);
@@ -131,7 +127,7 @@ input[type=checkbox]{
 #wave1{
     z-index: 5;
     position: absolute;
-    bottom: -100px;
+    bottom: -60px;
     left: 0;
     width: 100%;
     height: 30%;
@@ -204,6 +200,27 @@ input[type=checkbox]{
 }
 
 /* Sections */
+#About_us{
+    background: #7209b7;
+}
+
+#Blog{
+    background-color: aliceblue;
+}
+
+#Projects{
+    background-color: #7209b7;
+}
+
+#Contact{
+    background-color: #7209b7;
+}
+
+#Slider{
+    background-color: aliceblue;
+}
+
+
 .section{
     z-index: 6;
     padding-top: 100px;
@@ -212,7 +229,8 @@ input[type=checkbox]{
 }
 
 .box{
-    background-color: rgba(80, 79, 79, 0.1);
+    /* background-color: rgba(80, 79, 79, 0.1); */
+    background-color: rgba(255, 255, 255, 1);
     backdrop-filter: blur(4px);
     width: 80%;
     height: 80vh;
@@ -251,14 +269,14 @@ input[type=checkbox]{
 }
 
 .content-section .title{
-    color: #FAA613;
+    color: #03045e;
     text-transform: uppercase;
     font-size: 28px;
 }
 
 .content-section .content h3{
     margin-top: 20px;
-    color: #F5BB00;
+    color: #03045e;
     font-size: 21px;
 }
 
@@ -269,21 +287,24 @@ input[type=checkbox]{
     line-height: 1.5;
 }
 
-.content-section .content .button a{
-    width: 80vh;
-    background-color: #3d3d3d;
-    padding: 12px 40px;
-    color: #fff;
-    font-size: 25px;
-    letter-spacing: 1.5px;
+.section .button{
+    width: 100%;
+    height: 50px;
+    /* background: linear-gradient(75deg,  #ffb703, #e500a4 ); */
+    background-color: #ffaf03;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-align: center;
+    padding-top: 15px;
 }
 
-.content-section .content .button a:hover{
-    background-color: #a52a2a;
-    color: #fff;
-}
-.content-section .content .button{
-    margin: 40px 0px;
+.section .button a{
+    color: white;
+    font-size: large;
 }
 
 /* Contact */
@@ -296,6 +317,7 @@ input[type=checkbox]{
 #Contact{z-index: 4;}
 
 .contact-container{
+    z-index: 10;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -304,17 +326,14 @@ input[type=checkbox]{
     align-items: center;
 }
 
-.contact-btn{
-    padding: 10px 20px;
-    background-color: aliceblue;
-    letter-spacing: 1px;
-    border-color: black;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 15px;
-    cursor: pointer;
-    margin: 10px;
+.contact-container .btn{
+    display: none;
 }
+
+.contact-container .popup{
+    display: none;
+}
+
 
 .contact-btn1{
     padding: 10px 20px;
@@ -328,62 +347,9 @@ input[type=checkbox]{
     cursor: pointer;
 }
 
-.contact-btn:focus{
-    background-color: yellow;
-}
-
-.popup{
-    z-index: 2;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-
-.popup-overlay{
-    background-color: rgba(0, 0, 0, 0.3);
-    height: 100%;
-    width: 100%;
-    position: absolute;
-}
-
-.main-popup{
-    height: 100%;
-    width: 50%;
-    position: absolute;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateX(100%);
-}
-
-.pop-contact{
-    width: 60%;
-}
-
-.popup .close-btn{
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 10px 10px;
-    padding: 5px 10px;
-    font-size: 2rem;
-    cursor: pointer;
-    border: .6px solid black;
-    transition: .7s ease all;
-}
-
-.popup .close-btn:hover{
-    background-color: black;
-    color: beige;
-}
-
 
 .popup1{
-    z-index: 2;
+    z-index: 11;
     height: 100%;
     width: 100%;
     position: absolute;
@@ -412,7 +378,7 @@ input[type=checkbox]{
 }
 
 .pop-contact1{
-    width: 50%;
+    width: 30%;
 }
 
 .popup1 .close-btn1{
@@ -435,6 +401,7 @@ input[type=checkbox]{
 form{
     display: flex;
     flex-direction: column;
+
 }
 
 @keyframes slide-in{
@@ -455,6 +422,39 @@ form{
     }
 }
 
+/* Image Slider */
+.image_profile{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-image: url('images/img1.jpg');
+    background-size: cover;
+    background-position: center;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 20vh;
+}
+
+.testimonial_box{
+    position: relative;
+    top: 25vh;
+    width: 60vh;
+    margin: auto;
+    text-align: center;
+}
+
+.testimonial_box .btn_left{
+    position: absolute;
+    left: -80px;
+    top: -30px;
+}
+
+.testimonial_box .btn_right{
+    position: absolute;
+    right: -80px;
+    top: -30px;
+}
 
 @media only screen and (max-width: 768px){
     .menu{
@@ -561,7 +561,8 @@ form{
 
     .image-section{
         float: none;
-        width: 100%;
+        margin-bottom: 40px;
+        width: 30vw;
         display: block;
         margin: auto;
     }
@@ -577,5 +578,14 @@ form{
     .image-section img{
         display: block;
         margin: auto;
+    }
+
+    /* CONTACT */
+    .pop-contact1{
+        width: 50%;
+    }
+
+    .contact-container .popup{
+        display: none;
     }
 }
