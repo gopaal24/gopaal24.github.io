@@ -21,7 +21,7 @@ li{
 
 
 .navbar{
-    /* background-color: rgba(120, 118, 118, 0.1); */
+    height: 10vh;
     backdrop-filter: blur(4px);
     box-shadow: 0 4px 12px 0px rgba(0, 0, 0, 0.);
     width: 100vw;
@@ -45,51 +45,85 @@ li{
     font-size: 18px;
 }
 
-.menu .menu-all li{
-    transition: .3s;
-}
 
 .menu .menu-all li a{
     color: #F5BB00;
 }
 
+.menu .menu-all li{
+    transition: all .1s ease-in-out;
+}
+
 .dot{
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
+    width: 30px;
+    height: 2px;
+    border-radius: 10px;
     opacity: 0;
     transform: translate(0px, 32px);
     transition: all .3s ease-in-out;
 }
 
+.menu li:hover{
+    transform: translateY(-2px);
+}
 
 .menu li:nth-child(1):hover ~ .dot{
     opacity: 1;
-    background: #FAA613;
-    transform: translate(-400px, 32px);
+    background: #F5BB00;
+    transform: translate(-400px, 25px);
 }
 
 .menu li:nth-child(2):hover ~ .dot{
     opacity: 1;
-    background: #FAA613;
-    transform: translate(-300px, 32px);
+    background: #F5BB00;
+    transform: translate(-298px, 25px);
 }
 
 .menu li:nth-child(3):hover ~ .dot{
     opacity: 1;
-    background: #FAA613;
-    transform: translate(-200px, 32px);
+    background: #F5BB00;
+    transform: translate(-200px, 25px);
 }
 
 .menu li:nth-child(4):hover ~ .dot{
     opacity: 1;
-    background: #FAA613;
-    transform: translate(-80px, 32px);
+    background: #F5BB00;
+    transform: translate(-82px, 25px);
 }
 
-.menu li:hover {
-    transform: translateY(-3px);
+.dot1{
+    width: 30px;
+    height: 2px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translate(0px, 0px);
+    transition: all .3s ease-in-out;
 }
+
+.menu li:nth-child(1):hover ~ .dot1{
+    opacity: 1;
+    background: #F5BB00;
+    transform: translate(-448px, 0px);
+}
+
+.menu li:nth-child(2):hover ~ .dot1{
+    opacity: 1;
+    background: #F5BB00;
+    transform: translate(-345px, 0px);
+}
+
+.menu li:nth-child(3):hover ~ .dot1{
+    opacity: 1;
+    background: #F5BB00;
+    transform: translate(-248px, 0px);
+}
+
+.menu li:nth-child(4):hover ~ .dot1{
+    opacity: 1;
+    background: #F5BB00;
+    transform: translate(-130px, 0px);
+}
+
 
 .menu li{
     padding:5px 14px
@@ -460,8 +494,9 @@ input[type=checkbox]{
 
 /* Announce Msg */
 .announce{
+    z-index: 20;
     display: block;
-    width: 20vw;
+    width: 30vw;
     height: 30vh;
     border: #595959 solid 1px;
     background-color: rgba(255, 255, 255, 0.2);
@@ -472,6 +507,17 @@ input[type=checkbox]{
     right: 20px;
     bottom:180px;
     transform: translateX(120%);
+}
+
+.announce .kmore{
+    height: 40px;
+    width: 100%;
+    background-color: rgba(245, 187, 0, 0.5);
+    border: black solid 1px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    
 }
 
 /* Call */
@@ -496,17 +542,20 @@ input[type=checkbox]{
 }
 
 @media only screen and (max-width: 768px){
+
+
     .menu{
-        height: 100vh;
+        z-index: 20;
+        height: 90vh;
         display: none;
         position: absolute;
-        top: 80px;
-        background-color: rgba(80, 79, 79, 0.1);
-        backdrop-filter: blur(4px);
+        top: 10vh;
+        background-color: rgba(80, 79, 79, 0.7);
         right: 0;
         left: 0;
         padding: 16px 0px;
     }
+
     .menu-all{
         height: 100%;
         display: flex;
@@ -529,31 +578,60 @@ input[type=checkbox]{
 
     .menu li:nth-child(1):hover ~ .dot{
         opacity: 1;
-        background: yellow;
-        transform: translate(0px, -170px);
+        background: #F5BB00;
+        transform: translate(0px, -195px);
     }
 
     .menu li:nth-child(2):hover ~ .dot{
         opacity: 1;
-        background: yellow;
-        transform: translate(0px, -120px);
+        background: #F5BB00;
+        transform: translate(0px, -145px);
     }
 
     .menu li:nth-child(3):hover ~ .dot{
         opacity: 1;
-        background: yellow;
-        transform: translateY(-70px);
+        background: #F5BB00;
+        transform: translateY(-95px);
     }
 
     .menu li:nth-child(4):hover ~ .dot{
         opacity: 1;
-        background: yellow;
-        transform: translateY(-25px);
+        background: #F5BB00;
+        transform: translateY(-50px);
+    }
+
+    .dot1{
+        transform: translate(0px, 40px);
+    }
+
+    .menu li:nth-child(1):hover ~ .dot1{
+        opacity: 1;
+        background: #F5BB00;
+        transform: translate(0px, -190px);
+    }
+
+    .menu li:nth-child(2):hover ~ .dot1{
+        opacity: 1;
+        background: #F5BB00;
+        transform: translate(0px, -140px);
+    }
+
+    .menu li:nth-child(3):hover ~ .dot1{
+        opacity: 1;
+        background: #F5BB00;
+        transform: translateY(-90px);
+    }
+
+    .menu li:nth-child(4):hover ~ .dot1{
+        opacity: 1;
+        background: #F5BB00;
+        transform: translateY(-45px);
     }
 
     
 
     .hamburger{
+        color: #F5BB00;
         cursor: pointer;
     }
 
@@ -639,4 +717,9 @@ input[type=checkbox]{
         height: 50px;
         width: 50px;
     }
+
+    .announce{
+        width: 50vw;
+    }
+
 }

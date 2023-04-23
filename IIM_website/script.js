@@ -1,10 +1,24 @@
 
-//Navbar Scroll
+// Navbar Scroll
 const menu = document.querySelector("#checkbox_toggle")
 const about_us = document.getElementById("about-us")
 const blog = document.getElementById("blog")
 const projects = document.getElementById("projects")
 const contacts = document.getElementById("contacts")
+const hamburger = document.querySelector(".hamburger")
+const Navbar = document.querySelector(".navbar")
+let toggle = 1;
+
+hamburger.addEventListener('click', ()=>{
+    if(toggle%2){
+        Navbar.style.backgroundColor = 'rgba(80, 79, 79, 0.7)'
+        toggle++
+    }
+    else{
+        Navbar.style.backgroundColor = 'rgba(0,0,0,0)'
+        toggle++
+    }
+})
 
 if(window.innerWidth < 768){
     about_us.addEventListener('click', ()=>{
